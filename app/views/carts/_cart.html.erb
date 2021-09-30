@@ -13,11 +13,9 @@
 	<div class="king3">
 	<%= link_to "Continue Shopping",:controller=>"gallery",:action=>"index"%> </div>&nbsp&nbsp|&nbsp&nbsp 
 	<% if user_signed_in? %><div class="king3">
-<<<<<<< HEAD
+
 	<%= link_to "Checkout" ,:controller=>"gallery",:action=>"checkout" %></div>
-=======
-		<%= link_to "Checkout" ,:controller=>"gallery",:action=>"checkout" %>
->>>>>>> 7f2e369fd664fe1616a03d3a510f40cb4fd5683b
+
 		<% else %><div class="king3">
 		<%= link_to "Checkout", new_user_session_path %></div>
 		<% end %>
