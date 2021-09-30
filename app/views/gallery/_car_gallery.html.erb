@@ -1,0 +1,26 @@
+<div class="colum"><h1 class="store_head">Gallery#index</h1><div class="add_cart"><div class="table_bag">
+<table >
+<tr>
+               
+<% count=0 %>
+<% @products.each do |product|%>
+<% if (count % 4)== 0%>
+</tr>
+<tr>
+<% end %>
+<% count+=1 %><div class="cart_col">
+<td class="gallery_td"><%= image_tag product.product_image ,:height=>"100",:width=>"100" %><br/></div>
+Name :<%= product.name %><br/>
+Color :<%= product.color %><br/>
+Price :<%= product.price %><br/>
+Description :<%= product.description %><br/>
+Brand :<%= product.brand %><br/> 
+<%=button_to 'Add to Cart', line_items_path(:store_id => product.id), :class=>"btn btn-warning"%></div>
+</td>
+
+
+<% end %>
+</tr>
+</table></div></div>
+</div>
+ 
